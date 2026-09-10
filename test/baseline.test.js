@@ -1,0 +1,2 @@
+import test from 'node:test'; import assert from 'node:assert/strict'; import { readFile } from 'node:fs/promises'; import { contributionKinds, versionStates } from '../src/domain.js';
+test('资源分支样例包含贡献和父版本', async () => { const data=JSON.parse(await readFile(new URL('../fixtures/version-context.json', import.meta.url))); assert.ok(versionStates.includes(data.state)); assert.ok(data.parentVersionId); assert.ok(data.contributors.every(item=>contributionKinds.includes(item.kind))); assert.ok(data.requiredConfirmations>0); });
