@@ -1,1 +1,14 @@
-{"name":"teaching-research-authorship","version":"0.1.0","private":true,"type":"module","scripts":{"test":"node --test"},"engines":{"node":">=20"},"description":"教研成果署名协商领域资料"}
+{
+  "name": "teaching-research-authorship",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "description": "教研成果署名协商服务：贡献申报、共同确认、异议冻结与发布授权的连续证据服务"
+}
